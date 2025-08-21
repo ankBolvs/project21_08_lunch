@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&display=swap");
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Libertinus Sans", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffbf00;
+}
+
+/* Main Section */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+main section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+}
+
+main section .member-card {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  font-size: 1rem;
+}
+
+.member-card .card-header {
+  background-color: #ffbf00;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 1rem;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.member-card .list-group-item {
+  padding: 1rem;
+  border: none;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.member-card .list-group-item:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.amount {
+  font-weight: bold;
+}
+
+.amount.positive {
+  color: #28a745;
+}
+
+.amount.negative {
+  color: #dc3545;
+}
+.button {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Style for buttons */
+.button .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; /* spacing between text and icon */
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Optional hover effect */
+.button .btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Icon styling */
+.material-symbols-outlined {
+  font-size: 1.2rem;
+  vertical-align: middle;
+}

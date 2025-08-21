@@ -1,0 +1,93 @@
+<div class="container">
+  <form [formGroup]="createGroup">
+    <h1>Group Creation Form</h1>
+    <div class="group-name">
+      <!-- adding the error messages -->
+
+      <div class="group-name-l">
+        <label>Enter the group name</label>
+      </div>
+      <input
+        class="group-name-input"
+        type="text"
+        name="group-name"
+        placeholder="Enter the group name"
+        formControlName="group_name"
+      />
+
+      <div
+        *ngIf="submittedForm && createGroup.get('group_name')?.invalid"
+        class="custom-error"
+      >
+        <div *ngIf="createGroup.get('group_name')?.errors?.['required']">
+          Group Name is required.
+        </div>
+        <div *ngIf="createGroup.get('group_name')?.errors?.['minlength']">
+          Group Name must be at least 3 characters long.
+        </div>
+        <div *ngIf="createGroup.get('group_name')?.errors?.['maxlength']">
+          Group Name cannot exceed 50 characters.
+        </div>
+      </div>
+    </div>
+
+    <div class="description">
+      <div class="description-l">
+        <label>Enter the description</label>
+      </div>
+
+      <input
+        class="description-input"
+        placeholder="Enter the Description"
+        type="text"
+        name="description"
+        formControlName="description"
+      />
+    </div>
+
+    <div
+      *ngIf="submittedForm && createGroup.get('description')?.invalid"
+      class="custom-error"
+    >
+      <div *ngIf="createGroup.get('description')?.errors?.['required']">
+        Description is required.
+      </div>
+      <div *ngIf="createGroup.get('description')?.errors?.['minlength']">
+        Description must be at least 4 characters long.
+      </div>
+      <div *ngIf="createGroup.get('description')?.errors?.['maxlength']">
+        Description cannot exceed 20 characters.
+      </div>
+    </div>
+
+    <div class="category">
+      <div class="category-l">
+        <label>Enter the category</label>
+      </div>
+      <input
+        class="category-input"
+        type="text"
+        name="category"
+        placeholder="Enter the category"
+        formControlName="category"
+      />
+
+      <div
+        *ngIf="submittedForm && createGroup.get('category')?.invalid"
+        class="custom-error"
+      >
+        <div *ngIf="createGroup.get('category')?.errors?.['required']">
+          Category is required.
+        </div>
+        <div *ngIf="createGroup.get('category')?.errors?.['minlength']">
+          Category must be at least 3 characters long.
+        </div>
+        <div *ngIf="createGroup.get('category')?.errors?.['maxlength']">
+          Category cannot exceed 50 characters.
+        </div>
+      </div>
+    </div>
+    <button type="button" (click)="submitGroup()">Create Group</button>
+
+  </form>
+</div>

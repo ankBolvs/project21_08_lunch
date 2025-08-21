@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&display=swap");
+
+:host {
+  display: block;
+  background-color: #f9f9f9;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Libertinus Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container form {
+  margin-top: 3%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
+  width: 30%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 28px;
+  border-radius: 12px;
+}
+
+.container form h1 {
+  text-align: center;
+  margin: 16px;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.container div {
+  margin: 8px 0;
+}
+
+.container form input {
+  font-size: 16px !important;
+  border: 2px solid #ccc;
+  background-color: #f8f8f8;
+  padding: 10px 14px;
+  font-family: "Libertinus Sans", sans-serif;
+  width: 95%;
+  border-radius: 6px;
+}
+
+.container form button {
+  margin-top: 16px;
+  color: #000;
+  background-color: #ffbf00;
+  border: none;
+  font-weight: 900;
+  font-size: 18px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 1rem;
+}
+
+.button .button:hover {
+  transform: translateY(-2px);
+}
+
+.description,
+.group-name,
+.category {
+  position: relative;
+}
+
+.description-l,
+.group-name-l,
+.category-l {
+  line-height: 26px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.description-input {
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+  padding: 8px;
+  width: 100%;
+  height: 100px;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .container form {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .container form h1 {
+    font-size: 20px;
+  }
+}
+
+.custom-error {
+  font-size: 15px;
+  color: red;
+  margin-top: 5px;
+}
